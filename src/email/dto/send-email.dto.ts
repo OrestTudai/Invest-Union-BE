@@ -12,7 +12,7 @@ export class SendEmailDto {
   email: string;
 
   @IsNotEmpty({ message: 'Phone is required' })
-  @Matches(/^[0-9+()\- ]+$/, { message: 'Invalid phone number' })
+  @Matches(/^(?=.*\d)[0-9+()\- ]+$/, { message: 'Invalid phone number' })
   phone: string;
 
   @IsNotEmpty({ message: 'Message is required' })
